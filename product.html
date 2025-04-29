@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khasanah - Gallery</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header
+      class="container mx-auto flex items-center justify-between text-sm p-4 relative"
+    >
+      <!-- Logo -->
+      <div class="text-2xl">Khasanah.</div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="barButton" class="md:hidden focus:outline-none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 5.25h16.5M3.75 12h16.5M3.75 18.75h16.5"
+          />
+        </svg>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="/index.html" class="hover:border-b p-2 border-black"
+          >BERANDA</a
+        >
+        <a href="/product.html" class="border-b p-2 border-black">PRODUCT</a>
+        <a href="/contact.html" class="hover:border-b p-2 border-black"
+          >KONTAK KAMI</a
+        >
+      </nav>
+
+      <!-- Extra Contact Button -->
+      <div class="hidden md:flex items-center gap-2">
+        <a href="/contact.html">KONTAK KAMI</a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-4 h-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </div>
+
+      <!-- Mobile Nav -->
+      <nav
+        id="navMobile"
+        class="origin-top hidden flex-col items-start gap-2 p-4 shadow md:hidden z-10 bg-white transition-transform duration-300 transform scale-y-0 opacity-0 absolute top-full left-0 w-full"
+      >
+        <a href="/index.html" class="w-full p-2 hover:border-b">HOME</a>
+        <a href="/product.html" class="w-full p-2 border-b">PRODUCT</a>
+        <a href="/contact.html" class="w-full p-2 hover:border-b">CONTACT US</a>
+      </nav>
+    </header>
+
+    <main class="px-2 md:container mx-auto py-10">
+      <!-- Product Header -->
+      <section class="mb-16">
+        <h1 class="text-4xl md:text-8xl font-bold" data-aos="fade-down">
+          OUR PRODUCTS.
+        </h1>
+        <p
+          class="text-lg md:text-xl text-gray-700 mt-6 max-w-2xl"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Koleksi eksklusif kami dirancang untuk wanita modern yang menghargai
+          gaya syar'i tanpa mengorbankan keanggunan.
+        </p>
+      </section>
+
+      <!-- Product Grid -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product Item 1 -->
+        <div
+          class="group relative overflow-hidden"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="aspect-square overflow-hidden">
+            <img
+              src="demo.jpg"
+              alt="Product 1"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Tunika Zafira</h3>
+            <p class="text-gray-600">Rp 299.000</p>
+          </div>
+        </div>
+
+        <!-- Product Item 2 -->
+        <div
+          class="group relative overflow-hidden"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="aspect-square overflow-hidden">
+            <img
+              src="demo.jpg"
+              alt="Product 2"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Dress Aisyah</h3>
+            <p class="text-gray-600">Rp 599.000</p>
+          </div>
+        </div>
+
+        <!-- Product Item 3 -->
+        <div
+          class="group relative overflow-hidden"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div class="aspect-square overflow-hidden">
+            <img
+              src="demo.jpg"
+              alt="Product 3"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Dress Amira</h3>
+            <p class="text-gray-600">Rp 399.000</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Filter -->
+      <section class="mt-20" data-aos="fade-up">
+        <div class="flex flex-wrap gap-4 mb-8">
+          <button class="px-4 py-2 border border-black rounded-full">
+            All
+          </button>
+          <button
+            class="px-4 py-2 border border-gray-300 rounded-full hover:border-black"
+          >
+            Tunik
+          </button>
+          <button
+            class="px-4 py-2 border border-gray-300 rounded-full hover:border-black"
+          >
+            Dress
+          </button>
+          <button
+            class="px-4 py-2 border border-gray-300 rounded-full hover:border-black"
+          >
+            Outer
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center">Copyright © 2025 Khasanah Fashion</footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
